@@ -24,6 +24,6 @@ jobs:
 #          appId: ${{secrets.APPID}}
           appId: "1:467606789977:android:e4970f2cde7eb4cdcf7648"
 #          token: ${{secrets.TOKEN}}
-          token: "1//0ed_AItGokZtmCgYIARAAGA4SNwF-L9Ireb1NXoUxuQ8Mttsgv7Kcg_0BA9ow8qU-B9M3I2bN3BY6_xYC-RerIlXMOOq5HylqAVk"
+          token: "1//0ewdbstriLWAlCgYIARAAGA4SNwF-L9IrlxmV56CwDj8OUs3aOwwwgEao-WyHynDwAAJnDtBEZMchcEI65E83rDOY2zlaG4tuNQs"
           groups: testers
           file: build/app/outputs/flutter-apk/app-release.apk

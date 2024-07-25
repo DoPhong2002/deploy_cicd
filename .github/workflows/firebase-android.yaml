@@ -19,7 +19,7 @@ jobs:
       - run: flutter pub get
       - run: flutter build apk
       - name: Push APK to Releases
-        uses: wzieba/Firebase_Distribution-Gidhub-Action@v1.3.3
+        uses: wzieba/Firebase_Distribution-Gidhub-Action@v1.3
         with:
 #          appId: ${{secrets.APPID}}
           appId: "1:467606789977:android:e4970f2cde7eb4cdcf7648"

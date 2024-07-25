@@ -1,4 +1,4 @@
-name: Build and Release Android
+name: Build and Release
 on:
   push:
     branch:
@@ -12,14 +12,14 @@ jobs:
       - uses: actions/setup-java@v2
         with:
           distribution: 'zulu'
-          java-version: '11'
+          java-version: '12'
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.22.0'
       - run: flutter pub get
       - run: flutter build apk
       - name: Push APK to Releases
-        uses: wzieba/Firebase_Distribution-Gidhub-Action@v1.7.0
+        uses: wzieba/Firebase_Distribution-Gidhub-Action@v1.3.3
         with:
 #          appId: ${{secrets.APPID}}
           appId: "1:467606789977:android:e4970f2cde7eb4cdcf7648"

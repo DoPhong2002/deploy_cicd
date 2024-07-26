@@ -1,29 +1,29 @@
-name: Build and Release
-on:
-  push:
-    branch:
-      - main
-jobs:
-  build:
-    name: Build Android
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-java@v2
-        with:
-          distribution: 'zulu'
-          java-version: '12'
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.22.0'
-      - run: flutter pub get
-      - run: flutter build apk
-      - name: Push APK to Releases
-        uses: wzieba/Firebase_Distribution-Gidhub-Action@v1.3
-        with:
-#          appId: ${{secrets.APPID}}
-          appId: "1:467606789977:android:e4970f2cde7eb4cdcf7648"
-#          token: ${{secrets.TOKEN}}
-          token: "1//0ewdbstriLWAlCgYIARAAGA4SNwF-L9IrlxmV56CwDj8OUs3aOwwwgEao-WyHynDwAAJnDtBEZMchcEI65E83rDOY2zlaG4tuNQs"
-          groups: testers
-          file: build/app/outputs/flutter-apk/app-release.apk
+#name: Build and Release
+#on:
+#  push:
+#    branch:
+#      - main
+#jobs:
+#  build:
+#    name: Build Android
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - uses: actions/setup-java@v2
+#        with:
+#          distribution: 'zulu'
+#          java-version: '12'
+#      - uses: subosito/flutter-action@v2
+#        with:
+#          flutter-version: '3.22.0'
+#      - run: flutter pub get
+#      - run: flutter build apk
+#      - name: Push APK to Releases
+#        uses: wzieba/Firebase_Distribution-Gidhub-Action@v1.3.3
+#        with:
+##          appId: ${{secrets.APPID}}
+#          appId: "1:467606789977:android:e4970f2cde7eb4cdcf7648"
+##          token: ${{secrets.TOKEN}}
+#          token: "1//0ewdbstriLWAlCgYIARAAGA4SNwF-L9IrlxmV56CwDj8OUs3aOwwwgEao-WyHynDwAAJnDtBEZMchcEI65E83rDOY2zlaG4tuNQs"
+#          groups: testers
+#          file: build/app/outputs/flutter-apk/app-release.apk
